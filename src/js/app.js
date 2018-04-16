@@ -1,11 +1,22 @@
-import 'bootstrap/js/modal.js';
-// import 'bootstrap/dist/css/bootstrap.css';
-// import 'bootstrap/dist/css/bootstrap-theme.css';
+//
+// js files
+// --------------------
+
+// import 'bootstrap/js/modal.js';
 // import 'jquery/dist/jquery.js';
 
-// import '../css/style.css';
-import '../sass/main.scss';
-// import '../styl/main.styl';
+//
+// stylesheet files
+// --------------------
 
-$('h1').click(() => alert('teste'));
-var hello = 'Hello world!';
+// import '../css/style.css';
+// import '../styl/main.styl';
+import '../sass/main.scss';
+
+//
+// magic goes here
+// --------------------
+
+;(function(window, document){
+  $('h1').click(() => alert('It\'s only a test'));
+})(window, document);
