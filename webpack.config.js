@@ -1,9 +1,10 @@
+const webpack = require('webpack');
 const path = require('path');
 const babiliPlugin = require('babili-webpack-plugin');
 const extractTextPlugin = require('extract-text-webpack-plugin');
 const optimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const webpack = require('webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
+const copyWebpackPlugin = require('copy-webpack-plugin');
 
 let plugins = [];
 
@@ -24,6 +25,10 @@ plugins.push(new webpack.ProvidePlugin({
   '$': 'jquery/dist/jquery.js',
   'jQuery': 'jquery/dist/jquery.js'
 }));
+
+plugins.push(new copyWebpackPlugin([
+  { from: 'src/images/*', to: 'images/' }
+]));
 
 plugins.push(new webpack.optimize.CommonsChunkPlugin({
   name: 'vendor',

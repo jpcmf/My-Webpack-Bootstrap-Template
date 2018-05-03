@@ -1,3 +1,6 @@
+//
+// import stylesheets
+// --------------------
 @import "../../node_modules/bootstrap/dist/css/bootstrap.css";
 // @import "../../node_modules/bootstrap/dist/css/bootstrap-theme.css";
 @import "_colors";
@@ -8,5 +11,5 @@
 // --------------------
 
 body {
-  background-color: $yellow;
+  background-color: $main-bg-color;
 }
