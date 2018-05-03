@@ -1,4 +1,4 @@
-# My-Webpack-Bootstrap-Template
+# My Bootstrap Webpack Template
 
 ## Install dependencies
 
