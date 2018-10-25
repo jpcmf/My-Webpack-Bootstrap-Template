@@ -53,7 +53,7 @@ if(process.env.NODE_ENV == 'production') {
 module.exports = {
   entry: {
     app: './src/js/app.js',
-    vendor: ['jquery', 'bootstrap']
+    vendor: ['jquery', 'popper.js', 'bootstrap']
   },
   output: {
     filename: 'bundle.js',
@@ -73,14 +73,6 @@ module.exports = {
         test: /\.css$/,
         loader: 'style-loader!css-loader!postcss-loader'
       },
-      // {
-      //   test: /\.styl$/,
-      //   loader: extractTextPlugin.extract({
-      //     fallbackLoader: 'style',
-      //     loader: 'css!stylus?paths=node_modules/bootstrap-styl&resolve url'
-      //   }),
-      //   loader: 'style!css!stylus?paths=node_modules/bootstrap-styl&resolve url'
-      // },
       {
         test: /\.scss$/,
         use: extractTextPlugin.extract({
